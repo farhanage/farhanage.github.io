@@ -1,0 +1,365 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 10px 0;
+}
+
+nav {
+    max-width: 500px;
+    mask-image: #c9c9c9;
+    margin: 0 auto;
+    padding: 10px 0;
+    box-shadow: #1a1a1a;
+}
+  
+nav ul {
+    text-align: center;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 0%, rgba(197, 197, 197, 0.505) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    border-radius: 40px;
+    padding-inline-start: 0px;
+    cursor: context-menu;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 1.2em;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 50px;
+}
+
+nav ul li a.active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 50px;
+}
+
+.intro {
+    text-align: center;
+    padding: 10px 10px;
+    background: #1e1e1e;
+}
+
+.intro h1{
+    font-size: 5em;
+    background: linear-gradient(to bottom right, #ffffff, #ffffff, #b6b6b6, #797979, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.intro p {
+    margin: 2px 0 0;
+    font-size: 1.7em;
+    font-weight: bold;
+    padding-bottom: 2.3em;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.about img {
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.about .description {
+    max-width: 600px;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin: 0 0 10px;
+}
+
+.works, .tech {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.works h2, .tech h2 {
+    font-size: 2em;
+    margin: 0 0 20px;
+}
+
+.work-item, .tech-item {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+}
+
+
+.resume, .contact {
+    text-align: left;
+    padding: 10px 200px;
+    background: #1e1e1e;
+}
+
+.resume h1, .contact h1{
+    font-size: 3em;
+    background: linear-gradient(to bottom right, #ffffff, #ffffff, #b6b6b6, #797979, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.resume h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    margin-top: 50px;
+}
+
+.resume ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between; /* Align date to the right */
+    align-items: center;
+}
+
+.resume p {
+    margin: 10px 0 0 20px;
+    font-size: 1em;
+    color: #bbb;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #bbb; /* Light color for the date */
+}
+
+/* Projects Section */
+.projects {
+    text-align: left;
+    padding: 10px 200px;
+    background: #1e1e1e;
+}
+
+.projects h1 {
+    font-size: 3em;
+    background: linear-gradient(to bottom right, #ffffff, #ffffff, #b6b6b6, #797979, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.order-by, .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.order-by label {
+    margin-right: 10px;
+}
+
+#order-by, #filter {
+    padding: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0%;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272727;
+    color: #ffffff;
+    padding: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.project-item:hover {
+    background: #595959;
+}
+
+.project-title {
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+.project-description {
+    margin: 10px 0 0;
+    font-size: 1em;
+}
+
+.project-item a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.project-date-author {
+    flex: 1;
+}
+
+.project-content {
+    flex: 2;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #555;
+}
+
+.pagination button.active {
+    background-color: #666;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#order-by, #filter {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #2c2c2c;
+    color: #fff;
+    margin-right: 10px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+  
+  /* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #a7a7a7;
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #d1d1d1;
+}
+  
+  /* Add a background color and some padding around the form */
+.contact-form {
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.contact-form form {
+    border-radius: 10px;
+    width: 50vw;
+    max-width: 100%;
+    object-fit: cover;
+    margin-right: 5vw;
+}
+
+.contact-list {
+    max-width: 600px;
+}
+
+@media only screen and (max-width: 620px) {
+
+}
