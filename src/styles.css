@@ -58,7 +58,7 @@ nav ul li a.active {
     border-radius: 50px;
 }
 
-.intro {
+.intro, .contact {
     text-align: center;
     padding: 10px 10px;
     background: #1e1e1e;
@@ -137,10 +137,11 @@ footer {
 }
 
 
-.resume, .contact {
+.resume {
     text-align: left;
     padding: 10px 200px;
     background: #1e1e1e;
+    margin-bottom: 50px;
 }
 
 .resume h1, .contact h1{
@@ -170,12 +171,14 @@ footer {
     display: flex;
     justify-content: space-between; /* Align date to the right */
     align-items: center;
+    font-weight: bold;
 }
 
 .resume p {
     margin: 10px 0 0 20px;
     font-size: 1em;
     color: #bbb;
+    max-width: 50vw;
 }
 
 .date {
@@ -239,6 +242,7 @@ footer {
     padding: 20px;
     margin: 10px 0;
     cursor: pointer;
+    border-radius: 12px;
 }
 
 .project-item:hover {
@@ -247,7 +251,7 @@ footer {
 
 .project-title {
     font-size: 1.5em;
-    margin: 10px;
+    margin: 10px 0px;
 }
 
 .project-description {
@@ -305,9 +309,9 @@ footer {
 #order-by, #filter {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #2c2c2c;
     background: #2c2c2c;
-    color: #fff;
+    color: #8f8f8f;
     margin-right: 10px;
 }
 
@@ -315,18 +319,25 @@ footer {
 input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
     border-radius: 4px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    border: 1px solid #2c2c2c;
+    background: #2c2c2c;
+    color: #8f8f8f;
+}
+
+/* Style filled values */
+input[type=text]:not(:placeholder-shown), select:not(:placeholder-shown), textarea:not(:placeholder-shown) {
+    color: #fff; /* Filled text color */
 }
   
   /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: #a7a7a7;
-    color: rgb(0, 0, 0);
+    background-color: #8f8f8f;
+    color: #ffffff;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -350,14 +361,55 @@ input[type=submit]:hover {
 
 .contact-form form {
     border-radius: 10px;
-    width: 50vw;
+    width: 20vw;
     max-width: 100%;
     object-fit: cover;
     margin-right: 5vw;
 }
 
 .contact-list {
-    max-width: 600px;
+    width: 17vw;
+}
+
+.contact-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin: 20px 0; /* Add spacing between items */
+}
+
+.contact-list a {
+    display: flex; /* Ensures SVG scales properly */
+    align-items: center; /* Align SVG to center vertically */
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+}
+
+.contact-list svg {
+    fill: #fff; /* Change this to match your design */
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.contact-list a:hover svg {
+    fill: #ddd; /* Change this to match your design */
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 
 @media only screen and (max-width: 620px) {

@@ -121,3 +121,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     displayProjects(currentPage);
 });
+
+// Get the form element
+const contactForm = document.getElementById('contactForm');
+
+// Add event listener for form submission
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Fetch form data
+    const formData = new FormData(contactForm);
+    
+    // Submit form using fetch API (optional, if you want to handle response)
+    fetch('https://script.google.com/macros/s/AKfycbzExuzw0aRoON4UkkibxEiGgcfifZ1mgPoQwHGA8NbSX8WKU1bAlQ19kYz1Jkj3V70/exec', {
+        method: 'POST',
+        body: formData,
+        mode: 'cors'
+    })
+    .then(response => {
+        if (response.ok) {
+            // Reset form after successful submission
+            contactForm.reset();
+
+            // Show toast notification
+            showToastNotification('Form submitted successfully!');
+        } else {
+            throw new Error('Network response was not ok.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showToastNotification('An error occurred. Please try again later.');
+    });
+});
+
+// Function to display toast notification
+function showToastNotification(message) {
+    const toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    // Remove toast after 3 seconds
+    setTimeout(function() {
+        toast.remove();
+    }, 3000);
+}

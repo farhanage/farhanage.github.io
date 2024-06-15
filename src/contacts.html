@@ -22,28 +22,52 @@
             <h1>Contacts</h1>
         </section>
         <section class="contact-form">
-            <form action="action_page.php">
+            <form id="contactForm" method="POST">
             
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="First Name">
+                <input type="text" id="fname" name="First Name" placeholder="First Name">
             
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                <input type="text" id="lname" name="Last Name" placeholder="Last Name">
 
                 <label for="lname">E-mail</label>
-                <input type="text" id="lname" name="lastname" placeholder="john.doe@domain.com">
+                <input type="text" id="email" name="Email" placeholder="john.doe@domain.com">
             
                 <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <textarea id="subject" name="Subject" placeholder="Write something.." style="height:100px"></textarea>
             
                 <input type="submit" value="Submit">
             
             </form>
+            <div id="toastContainer"></div>
             <div class="contact-list">
                 <ul>
-                    <li>Instagram</li>
-                    <li>Twitter</li>
-                    <li>LinkedIn</li>
+                    <li>
+                        <a href="https://www.github.com/farhanage" target="_blank">
+                        <svg role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                            <title>GitHub</title>
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.304 3.495.997.108-.776.418-1.305.762-1.605-2.665-.303-5.466-1.332-5.466-5.931 0-1.31.47-2.381 1.235-3.221-.123-.303-.535-1.522.117-3.176 0 0 1.008-.322 3.3 1.23a11.513 11.513 0 0 1 3.004-.404c1.02.005 2.045.138 3.004.404 2.291-1.552 3.298-1.23 3.298-1.23.654 1.654.242 2.873.119 3.176.767.84 1.234 1.911 1.234 3.221 0 4.61-2.804 5.624-5.475 5.921.43.369.823 1.1.823 2.217v3.293c0 .32.217.694.824.576 4.765-1.587 8.199-6.084 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/farhanage" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.75 20h-3.5v-12h3.5v12zm-1.75-13.243c-1.167 0-2.107-.94-2.107-2.107 0-1.166.94-2.107 2.107-2.107s2.107.941 2.107 2.107c0 1.167-.94 2.107-2.107 2.107zm13.75 13.243h-3.5v-5.803c0-1.382-.027-3.156-1.923-3.156-1.924 0-2.222 1.504-2.222 3.056v5.903h-3.5v-12h3.357v1.643h.047c.467-.884 1.608-1.818 3.311-1.818 3.539 0 4.193 2.328 4.193 5.354v6.821z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/farhanageee" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                <title>Instagram</title>
+                                <path d="M4.66536 0C2.0927 0 0 2.09464 0 4.66797V11.3346C0 13.9073 2.09464 16 4.66797 16H11.3346C13.9073 16 16 13.9054 16 11.332V4.66536C16 2.0927 13.9054 0 11.332 0H4.66536ZM12.6667 2.66667C13.0347 2.66667 13.3333 2.96533 13.3333 3.33333C13.3333 3.70133 13.0347 4 12.6667 4C12.2987 4 12 3.70133 12 3.33333C12 2.96533 12.2987 2.66667 12.6667 2.66667ZM8 4C10.206 4 12 5.794 12 8C12 10.206 10.206 12 8 12C5.794 12 4 10.206 4 8C4 5.794 5.794 4 8 4ZM8 5.33333C7.29276 5.33333 6.61448 5.61428 6.11438 6.11438C5.61428 6.61448 5.33333 7.29276 5.33333 8C5.33333 8.70724 5.61428 9.38552 6.11438 9.88562C6.61448 10.3857 7.29276 10.6667 8 10.6667C8.70724 10.6667 9.38552 10.3857 9.88562 9.88562C10.3857 9.38552 10.6667 8.70724 10.6667 8C10.6667 7.29276 10.3857 6.61448 9.88562 6.11438C9.38552 5.61428 8.70724 5.33333 8 5.33333V5.33333Z">
+                            </svg>
+                            <span>Instagram</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -51,5 +75,6 @@
     <footer>
         <p>&copy; 2024 Farhan Akhtar Gymnasiar</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
