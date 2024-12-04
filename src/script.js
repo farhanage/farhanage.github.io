@@ -1,46 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
     const projects = [
         {
-            date: "2022-02-08",
-            author: "Harlow Malloc",
-            title: "Post With Code",
-            description: "This is a post with executable code.",
-            link: "Template-Project.html"
+            date: "2023-06-23",
+            author: "Farhan Akhtar Gymnasiar",
+            title: "Twitter Exploratory Data Analysis",
+            description: "An EDA & Data Visualization Project, Colab Notebook",
+            link: "https://colab.research.google.com/drive/19lkBVMYrTymAK9hGQdPR_iH4gEzzzgPa?usp=sharing"
         },
         {
-            date: "2022-02-05",
-            author: "Tristan O’Malley",
-            title: "Welcome To My Blog",
-            description: "This is the first post in a Quarto blog. Welcome!",
-            link: "project2.html"
+            date: "2024-11-13",
+            author: "Farhan Akhtar Gymnasiar, Mohammad Raffy Zeidan, Hilmy Rahmadani",
+            title: "Antarctics Rain Volume Prediction",
+            description: "Pekan Ristek 2024 Competition, Colab Notebook",
+            link: "https://colab.research.google.com/drive/1083-G46CS8hlNboSJ5o3IjMQkgsSrGw8?usp=sharing"
         },
         {
-            date: "2022-02-06",
-            author: "Tristan O’Malley",
-            title: "Aelcome To My Blog",
-            description: "This is the first post in a Quarto blog. Welcome!",
-            link: "project2.html"
+            date: "2024-07-01",
+            author: "Farhan Akhtar Gymnasiar, Mohammad Raffy Zeidan",
+            title: "Graph Neural Network for Large Scale Dynamic Temporal Graph Anomaly Detection",
+            description: "Ristek Datathon 2024 Competition, Medium",
+            link: "https://medium.com/@farhanage/graph-neural-network-for-large-scale-dynamic-graph-anomaly-detection-209b1704392e"
         },
         {
-            date: "2022-02-06",
-            author: "Tristan O’Malley",
-            title: "Aelcome To My Blog",
-            description: "This is the first post in a Quarto blog. Welcome!",
-            link: "project2.html"
-        },
-        {
-            date: "2022-02-06",
-            author: "Tristan O’Malley",
-            title: "Aelcome To My Blog",
-            description: "This is the first post in a Quarto blog. Welcome!",
-            link: "project2.html"
-        },
-        {
-            date: "2022-02-06",
-            author: "Tristan O’Malley",
-            title: "Aelcome To My Blog",
-            description: "This is the first post in a Quarto blog. Welcome!",
-            link: "project2.html"
+            date: "2023-12-12",
+            author: "Farhan Akhtar Gymnasiar",
+            title: "Simple Air Quality Dashboard on Streamlit",
+            description: "Streamlit Dashboard Project, Github",
+            link: "https://github.com/farhanage/learning-streamlit_dashboard/tree/master"
         },
     ];
 
